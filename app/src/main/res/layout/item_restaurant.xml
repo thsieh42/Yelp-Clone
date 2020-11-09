@@ -25,18 +25,6 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 
-    <RatingBar
-        android:id="@+id/ratingBar"
-        style="@style/Widget.AppCompat.RatingBar.Small"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:numStars="5"
-        android:rating="4.5"
-        android:stepSize="0.5"
-        app:layout_constraintStart_toStartOf="@+id/tvName"
-        app:layout_constraintTop_toBottomOf="@+id/tvName" />
-
     <TextView
         android:id="@+id/tvNumReviews"
         android:layout_width="wrap_content"
@@ -44,8 +32,8 @@
         android:layout_marginStart="4dp"
         android:text="TextView"
         android:textColor="@android:color/darker_gray"
-        app:layout_constraintBottom_toBottomOf="@+id/ratingBar"
-        app:layout_constraintStart_toEndOf="@+id/ratingBar"
+        app:layout_constraintBottom_toBottomOf="@+id/ivRating"
+        app:layout_constraintStart_toEndOf="@+id/ivRating"
         tools:text="321 Reviews" />
 
     <TextView
@@ -55,7 +43,7 @@
         android:layout_marginTop="4dp"
         android:text="TextView"
         app:layout_constraintStart_toStartOf="@+id/tvName"
-        app:layout_constraintTop_toBottomOf="@+id/ratingBar"
+        app:layout_constraintTop_toBottomOf="@+id/ivRating"
         tools:text="41 Kenmare St" />
 
     <TextView
@@ -89,4 +77,13 @@
         app:layout_constraintEnd_toEndOf="@+id/tvDistance"
         app:layout_constraintTop_toBottomOf="@+id/tvDistance"
         tools:text="$$" />
+
+    <ImageView
+        android:id="@+id/ivRating"
+        android:layout_width="80dp"
+        android:layout_height="17dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="@+id/tvName"
+        app:layout_constraintTop_toBottomOf="@+id/tvName"
+        app:srcCompat="@drawable/stars_regular_0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
